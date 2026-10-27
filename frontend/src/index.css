@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #fbf8f0;
+  }
+  body {
+    @apply bg-milk-100 font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    outline: 2px solid #2f5d9e;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-milk-300 bg-milk-50 shadow-card;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-carton-500 text-white hover:bg-carton-600 active:bg-carton-700;
+  }
+  .btn-ghost {
+    @apply btn border border-milk-300 bg-milk-50 text-ink hover:bg-milk-200;
+  }
+  .btn-danger {
+    @apply btn bg-stamp-500 text-white hover:bg-stamp-600;
+  }
+  .input {
+    @apply w-full rounded-xl border border-milk-300 bg-white/70 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-mute focus:border-carton-400 focus:outline-none focus:ring-2 focus:ring-carton-200;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
