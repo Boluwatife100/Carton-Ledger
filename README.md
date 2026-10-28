@@ -28,8 +28,8 @@ cd backend
 cp .env.example .env
 npm install
 npx prisma migrate deploy
-npm run seed        # optional demo data: demo@expensetracker.dev / demo12345
-npm run dev         # http://localhost:4000
+npm run seed        
+npm run dev         
 
 # 3. frontend (new terminal)
 cd frontend
